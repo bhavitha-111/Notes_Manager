@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Notes Manager</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<h2 class="logo">
+<i class="fa-solid fa-note-sticky"></i> Notes Manager
+</h2>
+
+<ul class="nav-links">
+
+<li><a onclick="showSection('home')"><i class="fa fa-home"></i> Home</a></li>
+
+<li><a onclick="showSection('notes')"><i class="fa fa-book"></i> Notes</a></li>
+
+<li><a onclick="showSection('important')"><i class="fa fa-star"></i> Important</a></li>
+
+<li><a onclick="showSection('previous')"><i class="fa fa-clock"></i> Previous</a></li>
+
+<li><a onclick="showSection('about')"><i class="fa fa-info-circle"></i> About</a></li>
+
+</ul>
+
+</nav>
+
+
+<!-- HOME -->
+
+<section id="home" class="section">
+
+<h1>Welcome to Notes Manager</h1>
+
+<p class="homeText">
+Create, manage and organize your notes efficiently.
+</p>
+
+</section>
+
+
+
+<!-- NOTES -->
+
+<section id="notes" class="section">
+
+<h2>Create Note</h2>
+
+<div class="note-form">
+
+<input type="hidden" id="noteId">
+
+<input type="text" id="title" placeholder="Note Title">
+
+<input type="text" id="content" placeholder="Note Content">
+
+<button onclick="addOrUpdateNote()">
+<i class="fa fa-plus"></i> Add Note
+</button>
+
+</div>
+
+<input type="text"
+id="searchBox"
+placeholder="Search notes..."
+onkeyup="searchNotes()"
+class="searchBox">
+
+<h2>Your Notes</h2>
+
+<ul id="notesList"></ul>
+
+</section>
+
+
+
+<!-- IMPORTANT -->
+
+<section id="important" class="section">
+
+<h1>Important Notes</h1>
+
+<div id="importantList"></div>
+
+</section>
+
+
+
+<!-- PREVIOUS -->
+
+<section id="previous" class="section">
+
+<h1>Previous Notes</h1>
+
+<div id="previousList"></div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about" class="section">
+
+<h1>About</h1>
+
+<p>
+This Notes Manager project is built using
+Spring Boot, REST APIs,
+H2 Database, HTML, CSS and JavaScript.
+</p>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
