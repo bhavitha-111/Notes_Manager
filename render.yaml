@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: notes-manager
+    runtime: java
+    buildCommand: chmod +x mvnw && ./mvnw clean install
+    startCommand: ./mvnw spring-boot:run
